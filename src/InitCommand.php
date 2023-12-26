@@ -74,7 +74,7 @@ class InitCommand extends Command
         }
 
         // 检测是否有 APP_KEY
-        $APP_KEY = env('APP_KEY');
+        $APP_KEY = config('app.key', env('APP_KEY'));
         if (empty($APP_KEY)) {
             // 初始化
             $this->error('你还没有生成应用程序密钥。但是这个命令是用于 Kubernetes 容器启动时执行的，接下来将生成一个密钥，请手动保存它并将它映射到 Pod 中。');
@@ -166,7 +166,6 @@ class InitCommand extends Command
 
     public function startWeb()
     {
-        $this->info('启动 Web 服务。');
         $this->call('octane:start', [
             '--host' => $this->option('host'),
             '--port' => $this->option('port'),
@@ -176,7 +175,6 @@ class InitCommand extends Command
 
     public function startQueue()
     {
-        $this->info('启动队列服务。');
         $this->call('queue:work', [
             '--queue' => $this->option('queue'),
             '--name' => $this->option('name'),
