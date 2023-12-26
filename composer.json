@@ -12,6 +12,13 @@
             "email": "im@ivampiresp.com"
         }
     ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ivampiresp\\LaravelInitCommand\\LaravelInitCommandServiceProvider"
+            ]
+        }
+    },
     "minimum-stability": "stable",
     "require": {},
     "config": {
