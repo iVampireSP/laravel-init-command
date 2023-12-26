@@ -1,0 +1,21 @@
+{
+    "name": "ivampiresp/laravel-init-command",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "ivampiresp\\LaravelInitCommand\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ivamp",
+            "email": "im@ivampiresp.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}
